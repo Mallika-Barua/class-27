@@ -1,0 +1,57 @@
+#navlist li{
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+    position: absolute;
+}
+#navlist li, #navlist a{
+    height: 300px;
+    display: block;
+}
+#home{
+    left: 0;
+    background: url(img/img_navsprites.gif) 0 0;
+    width: 45px;
+    background-repeat: no-repeat;
+
+}
+#prev{
+    background: url(img/img_navsprites.gif) -45px 0px;
+    width: 45px;
+     background-repeat: no-repeat;
+    left: 45px;
+    
+}
+#next{
+    background: url(img/img_navsprites.gif) -90px 0px;
+    width: 45px;
+     background-repeat: no-repeat;
+    left: 89px;
+}
+body{
+    counter-reset: main;
+}
+h1::before{
+    counter-increment: main;
+    content: "main concept" counter (main)": ";
+}
+h1{
+    counter-reset: sub;
+}
+h2::before{
+    counter-increment: sub;
+    content: counter(main)". " counter(sub)":"; 
+}
+h3::before{
+    counter-increment: test;
+    content: "web" counter(test)":";
+}
+ol{
+    counter-reset: list;
+    list-style-type: none;
+}
+li::before{
+    counter-increment: list;
+    content: counters(list, ".")" ";
+}
+
